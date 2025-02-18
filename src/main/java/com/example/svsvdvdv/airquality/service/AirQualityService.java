@@ -67,6 +67,15 @@ public class AirQualityService {
         return sb.toString();
     }
 
+    // getAirQualityDataBasic 개선 - RestTemplate
+    public String getAirQualityDataRest(String sidoName) throws IOException {
+        return null;
+    }
+
+    // getAirQualityDataReactive 개선 - WdbClient
+    public String getAirQualityDataReactive(String sidoName) throws IOException {
+        return null;
+    }
 }
 // import 자동처리 불가한 것들 수동 처리 및 예외 처리
 // return문 자동 처리
