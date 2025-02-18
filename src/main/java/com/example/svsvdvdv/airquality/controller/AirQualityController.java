@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.io.IOException;
 
 @Controller
-public class AirQulityController {
+public class AirQualityController {
 
     // 생성자 주입 방식으로 서비스 객체 생성
     private final AirQualityService airQualityService;
 
-    public AirQulityController(AirQualityService airQualityService) {
+    public AirQualityController(AirQualityService airQualityService) {
         this.airQualityService = airQualityService;
     }
 
