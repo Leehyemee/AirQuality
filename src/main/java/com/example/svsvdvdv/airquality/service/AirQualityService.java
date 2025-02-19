@@ -24,12 +24,12 @@ public class AirQualityService {
 
         // API 요청을 위해 URL 구성
         StringBuilder urlBuilder = new StringBuilder("http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty"); /*URL*/
-        urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8")).append("=").append(serviceKey); /*Service Key*/
-        urlBuilder.append("&" + URLEncoder.encode("returnType","UTF-8") + "=" + URLEncoder.encode("json", "UTF-8")); /*xml 또는 json*/
-        urlBuilder.append("&" + URLEncoder.encode("numOfRows","UTF-8") + "=" + URLEncoder.encode("100", "UTF-8")); /*한 페이지 결과 수*/
-        urlBuilder.append("&" + URLEncoder.encode("pageNo","UTF-8") + "=" + URLEncoder.encode("1", "UTF-8")); /*페이지번호*/
-        urlBuilder.append("&" + URLEncoder.encode("sidoName","UTF-8") + "=" + URLEncoder.encode(sidoName, "UTF-8")); /*시도 이름(전국, 서울, 부산, 대구, 인천, 광주, 대전, 울산, 경기, 강원, 충북, 충남, 전북, 전남, 경북, 경남, 제주, 세종)*/
-        urlBuilder.append("&" + URLEncoder.encode("ver","UTF-8") + "=" + URLEncoder.encode("1.0", "UTF-8")); /*버전별 상세 결과 참고*/
+        urlBuilder.append("?").append(URLEncoder.encode("serviceKey","UTF-8")).append("=").append(serviceKey); /*Service Key*/
+        urlBuilder.append("&").append(URLEncoder.encode("returnType","UTF-8")).append("=").append(URLEncoder.encode("json", "UTF-8")); /*xml 또는 json*/
+        urlBuilder.append("&").append(URLEncoder.encode("numOfRows","UTF-8")).append("=").append(URLEncoder.encode("100", "UTF-8")); /*한 페이지 결과 수*/
+        urlBuilder.append("&").append(URLEncoder.encode("pageNo","UTF-8")).append("=").append(URLEncoder.encode("1", "UTF-8")); /*페이지번호*/
+        urlBuilder.append("&").append(URLEncoder.encode("sidoName","UTF-8")).append("=").append(URLEncoder.encode(sidoName, "UTF-8")); /*시도 이름(전국, 서울, 부산, 대구, 인천, 광주, 대전, 울산, 경기, 강원, 충북, 충남, 전북, 전남, 경북, 경남, 제주, 세종)*/
+        urlBuilder.append("&").append(URLEncoder.encode("ver","UTF-8")).append("=").append(URLEncoder.encode("1.0", "UTF-8")); /*버전별 상세 결과 참고*/
 
         // HTTP 연결 후 응답코드 확인
         URL url = new URL(urlBuilder.toString());
